@@ -15,5 +15,15 @@
   "bugs": {
     "url": "https://github.com/kvelasquez-2019504/Examen-BIM1/issues"
   },
-  "homepage": "https://github.com/kvelasquez-2019504/Examen-BIM1#readme"
+  "homepage": "https://github.com/kvelasquez-2019504/Examen-BIM1#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.4",
+    "express": "^4.18.2",
+    "mongodb": "^6.3.0",
+    "mongoose": "^8.1.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.3"
+  }
 }
