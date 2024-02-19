@@ -1,0 +1,19 @@
+{
+  "name": "evaluacion-bim1",
+  "version": "1.0.0",
+  "description": "Proyecto de evaluacion de bimestre I",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kvelasquez-2019504/Examen-BIM1.git"
+  },
+  "author": "Kenneth Velásquez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kvelasquez-2019504/Examen-BIM1/issues"
+  },
+  "homepage": "https://github.com/kvelasquez-2019504/Examen-BIM1#readme"
+}
