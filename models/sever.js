@@ -1,6 +1,6 @@
 const express = require("express");
 const cors = require("cors");
-const {dbConnection} = require("../db/config");
+const {dbConnection} = require("../db/config.js");
 
 class Server{
     constructor(){
