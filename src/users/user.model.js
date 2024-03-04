@@ -9,13 +9,13 @@ export const UserSchema = mongoose.Schema({
         type:String,
         required:[true, 'Your name complet is required']
     },
-    password:{
-        type:String,
-        required:[true,'A password is required for security']
-    },
     age:{
         type:Number,
         required:[true,'Your age is required for your account']
+    },
+    password:{
+        type:String,
+        required:[true,'A password is required for security']
     },
     role:{ 
         type:String,
