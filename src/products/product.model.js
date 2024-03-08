@@ -1,7 +1,7 @@
-import mongoose from 'mongoose';
+import mongoose,{Schema} from 'mongoose';
 
-const ProductSchema = mongoose.Schema({
-    nombre:{
+const ProductSchema =Schema({
+    name:{
         type:String,
         required:[true,'The name of producto is required']
     },
@@ -26,7 +26,7 @@ const ProductSchema = mongoose.Schema({
         default:""
     },
     state:{
-        type:boolean,
+        type:Boolean,
         default:true
     }
 });
