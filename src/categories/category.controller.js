@@ -24,17 +24,22 @@ export const categoryPut = async(req=request,res=response)=>{
 
 export const categoryDelete =async (req=request,res=response)=>{
     const {idCategory} =req.params;
-    let arrayNewCategories=[];
+    let productsWithCategory=[];
     const [productWithCategory]=await Promise.all([
-        Product.find({$and:[{state:true},{category:idCategory}]})
+        Product.find({category:idCategory})
     ]);
     for(let product of productWithCategory){
        await Product.findByIdAndUpdate(product._id,{category:"65eb106dcc44286c4fb35f5f"});
        const {name,category} = await Product.findById(product._id);
-       arrayNewCategories.push({name,category});
+       productsWithCategory.push({name,category});
     }
+    const {name} =await Category.findById('65eb106dcc44286c4fb35f5f');
+    await Category.findByIdAndUpdate(idCategory,{state:false});
+    const categoryDeleted =await Category.findByIdAndUpdate(idCategory);
     res.status(200).json({
-        arrayNewCategories
+        categoryAsigned:name,
+        categoryDeleted,
+        newCategoryInProducts:productsWithCategory
     });
 }
 
