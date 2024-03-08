@@ -16,5 +16,17 @@ const ShoppingCartSchema= Schema({
     totalPrice:{
         type:Number,
         default:0
+    },
+    state:{
+        type:Boolean,
+        default:true
     }
-})
+});
+
+ShoppingCartSchema.method.JSON=function(){
+    const {__v,_id,state,...shoppingCar}=this.toObject();
+    shoppingCar.uid=_id;
+    return shoppingCar;
+}
+
+export default mongoose.model('ShoppingCar',ShoppingCartSchema);
