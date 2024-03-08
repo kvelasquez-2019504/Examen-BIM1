@@ -92,7 +92,7 @@ export const bestSellers = async (req = request, res = response) => {
     }
     let mid = sum/totalProducts;
     const [productsBestSellers] = await Promise.all([
-        Product.find({$and:[{state:true},{salesAmount:{$gt:mid}}]})
+        Product.find({$and:[{state:true},{salesAmount:{$gt:mid}}]}).sort({ salesAmount: -1 })
     ]);
 
     res.status(200).json({
