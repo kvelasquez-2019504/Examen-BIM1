@@ -43,7 +43,7 @@ router.get('/control/outOfStock',[
 
 router.get('/control/bestSellers',[
     validateJWT,
-    verifyRole("ADMIN"),
+    verifyRole("ADMIN","CLIENT"),
     validateFields
 ],bestSellers);
 
