@@ -7,6 +7,7 @@ import { productGet,
     controlOutStock,
     bestSellers,
     specificProductUpdate,
+    productDelete,
     productPost } from "./product.controller.js";
 import { verifyQuantity } from "../helpers/db-validator.js";
 import { validateJWT } from "../middlewares/validateJWT.js";
@@ -52,6 +53,13 @@ router.put('/:idProduct',[
     verifyIdProduct,
     validateFields
 ],specificProductUpdate);
+
+router.delete('/:idProduct',[
+    validateJWT,
+    verifyRole('ADMIN'),
+    verifyIdProduct,
+    validateFields
+],productDelete);
 
 router.post('/',[validateJWT,
     verifyRole('ADMIN'),

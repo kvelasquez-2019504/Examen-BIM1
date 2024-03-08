@@ -71,6 +71,16 @@ export const controlOutStock = async (req = request, res = response) => {
 
 }
 
+export const productDelete = async(req=request,res=response)=>{
+    const { idProduct } = req.params;
+    await Product.findByIdAndUpdate(idProduct, {state:false});
+    const productSearch = await Product.findById(idProduct);
+    res.status(200).json({
+        msg: "Product deleted",
+        productSearch
+    });
+}
+
 export const bestSellers = async (req = request, res = response) => {
     let sum=0;
     const [totalProducts, salesAmount] = await Promise.all([
