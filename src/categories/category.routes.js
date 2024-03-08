@@ -12,7 +12,7 @@ import { validateJWT } from "../middlewares/validateJWT.js";
 const router = Router();
 
 router.get('/',[validateJWT,
-    verifyRole("ADMIN"),
+    verifyRole("ADMIN","CLIENT"),
     validateFields
 ],categoryGet);
 

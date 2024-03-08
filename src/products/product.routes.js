@@ -8,6 +8,7 @@ import { productGet,
     bestSellers,
     specificProductUpdate,
     productDelete,
+    searchName,
     productPost } from "./product.controller.js";
 import { verifyQuantity } from "../helpers/db-validator.js";
 import { validateJWT } from "../middlewares/validateJWT.js";
@@ -46,6 +47,12 @@ router.get('/control/bestSellers',[
     verifyRole("ADMIN","CLIENT"),
     validateFields
 ],bestSellers);
+
+router.get('/user/:name',[
+    validateJWT,
+    verifyRole("CLIENT"),
+    validateFields
+],searchName);
 
 router.put('/:idProduct',[
     validateJWT,

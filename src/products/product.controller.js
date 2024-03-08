@@ -12,6 +12,16 @@ export const productGet = async (req = request, res = response) => {
     });
 }
 
+export const searchName= async(req=request, res=response)=>{
+    const {name} =req.params;
+    const [productsName] = await Promise.all([
+        Product.find({name:{$regex:name,$options:'i'}})
+    ]);
+    res.status(200).json({
+        productsName
+    })
+}
+
 export const productGetById = async (req = request, res = response) => {
     const { idProduct } = req.params;
     const producSearch = await Product.findById(idProduct);
@@ -19,7 +29,6 @@ export const productGetById = async (req = request, res = response) => {
         msg: "Your product was found!",
         producSearch
     });
-
 }
 
 export const control = async (req = request, res = response) => {
