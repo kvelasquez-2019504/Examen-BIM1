@@ -1,5 +1,6 @@
 import User from "../users/user.model.js";
 import bcryptjs from "bcryptjs";
+import Product from "../products/product.model.js";
 
 export const verifyUsername = async (req, res, next) => {
     const userLog = req.user;
@@ -44,4 +45,15 @@ export const verifyPassword =async (req,res,next)=>{
             next();
         }
     }
+}
+
+export const verifyIdProduct =async (req,res,next)=>{
+    const {idProduct} = req.params;
+    const productSearch = await Product.findById(idProduct);
+    if(!productSearch){
+        return res.status(400).json({
+            msg:"The product not exist in the database"
+        });
+    }
+    next();
 }
