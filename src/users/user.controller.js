@@ -7,7 +7,7 @@ export const userPost = async(req,res)=>{
     const userNew = new User({username,name,age,password});
     const salt = bcryptjs.genSaltSync();
     userNew.password = bcryptjs.hashSync(userNew.password,salt);
-    //await userNew.save();
+    await userNew.save();
     res.status(200).json({
         msg:"you have successfully registered",
         userNew
