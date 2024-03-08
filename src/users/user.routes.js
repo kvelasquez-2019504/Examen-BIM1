@@ -5,9 +5,19 @@ import { existsUsername,
     validateAgeUser } from '../helpers/db-validator.js';
 import {validateJWT} from '../middlewares/validateJWT.js';
 import { verifyRole } from '../middlewares/validate-role.js';
-import { userPut,userPost } from './user.controller.js';
-import { verifyUsername } from '../middlewares/validate-data.js';
+import { userDelete,
+    userPut,
+    userPost } from './user.controller.js';
+import { verifyPassword,verifyUsername } from '../middlewares/validate-data.js';
 const router = Router();
+
+router.delete('/',[
+    validateJWT,
+    check('password','The password is required').not().isEmpty(),
+    check('passwordConfirm','It is necessary to confirm the password').not().isEmpty(),
+    verifyPassword,
+    validateFields
+],userDelete);
 
 router.put('/',[
     validateJWT,

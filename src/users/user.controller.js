@@ -2,6 +2,16 @@ import { request, response } from "express";
 import bcryptjs from 'bcryptjs';
 import User from "./user.model.js";
 
+export const userDelete =async (req,res)=>{
+    const userLog = req.user;
+    await User.findByIdAndUpdate(userLog.id,{state:false});
+    const userDelete = await User.findById(userLog.id);
+    res.status(200).json({
+        msg: "Your account has been deleted",
+        userDelete
+    });
+}
+
 export const userPut = async (req = request, res = response) => {
     const userLog = req.user;
     const { _id, state, ...resto } = req.body;

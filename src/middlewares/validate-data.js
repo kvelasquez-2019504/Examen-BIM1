@@ -1,4 +1,6 @@
 import User from "../users/user.model.js";
+import bcryptjs from "bcryptjs";
+
 export const verifyUsername = async (req, res, next) => {
     const userLog = req.user;
     const { username } = req.body;
@@ -23,5 +25,23 @@ export const verifyUsername = async (req, res, next) => {
         res.status(500).json({
             msg: "Contact administrator"
         });
+    }
+}
+
+export const verifyPassword =async (req,res,next)=>{
+    const userLog = req.user;
+    const {password,passwordConfirm}=req.body;
+    if(password!=passwordConfirm){
+        return res.status(400).json({
+            msg:"Passwords do not match"
+        });
+    }else{
+        if(!bcryptjs.compareSync(password,userLog.password)){
+            return res.status(400).json({
+                msg:"The password is not the same as your account password."
+            });
+        }else{
+            next();
+        }
     }
 }
