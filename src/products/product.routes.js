@@ -3,6 +3,10 @@ import { check } from "express-validator";
 import {validateFields} from '../middlewares/validate-fields.js';
 import { productGet,
     productGetById,
+    control,
+    controlOutStock,
+    bestSellers,
+    specificProductUpdate,
     productPost } from "./product.controller.js";
 import { verifyQuantity } from "../helpers/db-validator.js";
 import { validateJWT } from "../middlewares/validateJWT.js";
@@ -23,6 +27,31 @@ router.get('/:idProduct',[
     verifyIdProduct,
     validateFields
 ],productGetById);
+
+router.get('/control/list',[
+    validateJWT,
+    verifyRole("ADMIN"),
+    validateFields
+],control);
+
+router.get('/control/outOfStock',[
+    validateJWT,
+    verifyRole("ADMIN"),
+    validateFields
+],controlOutStock);
+
+router.get('/control/bestSellers',[
+    validateJWT,
+    verifyRole("ADMIN"),
+    validateFields
+],bestSellers);
+
+router.put('/:idProduct',[
+    validateJWT,
+    verifyRole("ADMIN"),
+    verifyIdProduct,
+    validateFields
+],specificProductUpdate);
 
 router.post('/',[validateJWT,
     verifyRole('ADMIN'),
