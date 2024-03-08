@@ -9,7 +9,7 @@ router.post('/',[
     check("username","The username is required for the account").not().isEmpty(),
     check("username").custom(existsUsername),
     check('name','Your name is required for the account').not().isEmpty(),
-    check('age','You need to be at least 18 years old.').not().isEmpty(),
+    check('age','your age is mandatory for the account').not().isEmpty(),
     check('age').custom(validateAgeUser),
     check('password','The password is mandatory and with a minimum of 6 characters').isLength({min:6}),
     validateFiels,

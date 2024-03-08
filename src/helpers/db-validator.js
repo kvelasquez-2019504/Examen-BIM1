@@ -9,6 +9,6 @@ export const existsUsername= async(username="")=>{
 
 export const validateAgeUser = async (age='')=>{
     if (age<18){
-        throw new Error('your age is mandatory for the account');
+        throw new Error('You need to be at least 18 years old.');
     }
 }
