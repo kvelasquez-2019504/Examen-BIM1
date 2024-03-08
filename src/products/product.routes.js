@@ -21,7 +21,7 @@ router.post('/',[validateJWT,
     check('cost','The cost is required for product').not().isEmpty(),
     check("stock",'The stock for producto is required').not().isEmpty(),
     check('salesAmount','The sales amount is required').not().isEmpty(),
-    check(['cost','stock','salesAmount']).custom(verifyQuantity),
+    check(['cost','stock']).custom(verifyQuantity),
     //check('category','Category is required with ID in Mongo format').isMongoId(),
     validateFields
 ],productPost);
