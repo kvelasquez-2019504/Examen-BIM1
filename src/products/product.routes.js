@@ -4,6 +4,7 @@ import {validateFields} from '../middlewares/validate-fields.js';
 import { productGet,
     productGetById,
     control,
+    productForCategory,
     controlOutStock,
     bestSellers,
     specificProductUpdate,
@@ -30,11 +31,18 @@ router.get('/:idProduct',[
     validateFields
 ],productGetById);
 
+router.get('/user/products/forCategory',[
+    validateJWT,
+    verifyRole('CLIENT'),
+    validateFields
+],productForCategory);
+
 router.get('/control/list',[
     validateJWT,
     verifyRole("ADMIN"),
     validateFields
 ],control);
+
 
 router.get('/control/outOfStock',[
     validateJWT,

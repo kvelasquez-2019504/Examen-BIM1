@@ -1,5 +1,6 @@
 import { request, response } from "express";
 import Product from "./product.model.js";
+import Category from "../categories/category.model.js";
 
 export const productGet = async (req = request, res = response) => {
     const [total, products] = await Promise.all([
@@ -28,6 +29,23 @@ export const productGetById = async (req = request, res = response) => {
     res.status(200).json({
         msg: "Your product was found!",
         producSearch
+    });
+    
+}
+
+export const productForCategory = async(req=request,res=response)=>{
+    let arrayProductsForCategory=[];
+    const [totalCategories] = await Promise.all([
+        Category.find({state:true})
+    ]);
+    for(let category of totalCategories){
+        const {__v,state,_id,...resto} = await Promise.all([
+            Product.find({category:category._id})
+        ])
+        arrayProductsForCategory.push({nameCategory:category.name,products:resto});
+    }
+    res.status(200).json({
+        arrayProductsForCategory
     });
 }
 
