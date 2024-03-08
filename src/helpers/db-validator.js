@@ -12,3 +12,11 @@ export const validateAgeUser = async (age='')=>{
         throw new Error('You need to be at least 18 years old.');
     }
 }
+
+export const verifyQuantity =async(...attribute)=>{
+    
+        if(attribute.includes(0)){
+            throw new Error(`you must enter a value greater than 0`);
+        }
+    
+}
