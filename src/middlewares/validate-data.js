@@ -69,10 +69,16 @@ export const verifyIdProduct = async (req, res, next) => {
 export const verifyIdCategory = async(req,res,next)=>{
     const {idCategory}=req.params;
     try {
-        const categorySearch = await Category.findById(idCategory);
-        if(!categorySearch){
+        if(idCategory!="65eb106dcc44286c4fb35f5f"){
+            const categorySearch = await Category.findById(idCategory);
+            if(!categorySearch){
+                return res.status(400).json({
+                    msg:"The category does not exist in database"
+                });
+            }
+        }else{
             return res.status(400).json({
-                msg:"The category does not exist in database"
+                msg:"This category cannot be  or deleted"
             });
         }
         next();

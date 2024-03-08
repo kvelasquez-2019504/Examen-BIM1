@@ -3,6 +3,7 @@ import { check } from "express-validator";
 import { validateFields } from "../middlewares/validate-fields.js";
 import { categoryGet,
     categoryPut,
+    categoryDelete,
     categoryPost } from "./category.controller.js";
 import { verifyIdCategory } from "../middlewares/validate-data.js";
 import { verifyRole } from "../middlewares/validate-role.js";
@@ -23,6 +24,13 @@ router.put('/:idCategory',[
     check('description','The description is required').not().isEmpty(),
     validateFields
 ],categoryPut);
+
+router.delete('/:idCategory',[
+    validateJWT,
+    verifyRole("ADMIN"),
+    verifyIdCategory,
+    validateFields
+],categoryDelete);
 
 router.post('/',[
     validateJWT,
