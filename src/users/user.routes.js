@@ -8,6 +8,8 @@ const router = Router();
 router.post('/',[
     check("username","The username is required for the account").not().isEmpty(),
     check("username").custom(existsUsername),
+    check('name','Your name is required for the account').not().isEmpty(),
+    check('password','The password is mandatory and with a minimum of 6 characters').isLength({min:6}),
     validateFiels,
 ],userPost);
 
