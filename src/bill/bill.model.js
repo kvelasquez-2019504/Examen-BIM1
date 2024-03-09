@@ -9,6 +9,10 @@ const BillSchema = Schema({
         type:Array,
         default:[]
     },
+    totalItems:{
+        type:Number,
+        default:0
+    },
     fullPayment:{
         type:Number,
         default:0
@@ -17,7 +21,7 @@ const BillSchema = Schema({
         type:Number,
         default:0
     },
-    totalItems:{
+    turned:{
         type:Number,
         default:0
     },
