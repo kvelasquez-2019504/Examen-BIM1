@@ -143,3 +143,21 @@ export const existsIdCategory = async (req, res, next) => {
         });
     }
 }
+
+export const existsIdUser= async (req, res, next) => {
+    const { idUser } = req.params;
+    try {
+        const userSearch = await User.findById(idUser);
+        if (!userSearch) {
+            return res.status(400).json({
+                msg: "The user does not exist in database"
+            });
+        }
+        next();
+    } catch (error) {
+        console.log(error);
+        return res.status(500).json({
+            msg: "Check that the ID is from Mongo. If not, contact the administrator."
+        });
+    }
+}

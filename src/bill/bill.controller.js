@@ -13,10 +13,32 @@ export const billsGet = async (req = request, res = response) => {
     })
 }
 
+export const billGetUser = async(req,res)=>{
+    const {idUser} = req.params;
+    const [totalBills] = await Promise.all([
+        Bill.find({ state: true, idUser:idUser})
+    ]);
+    res.status(200).json({
+        totalBills
+    })
+}
+
 export const billPut=async(req,res)=>{
     const {idBill} =req.params;
+    const{idProduct,newQuantity}=req.body;
     const billSearch = await Bill.findById(idBill);
-    
+    for(let producto of billSearch.products){
+        console.log(producto.idProduct);
+        const productSearch = await Product.findById(idProduct);
+        if(productSearch.stock<newQuantity){
+            res.status(200).json({
+                msg:"Not enough in stock"
+            });
+        }else{
+            console.log(productSearch.id==idProduct);
+            console.log(productSearch.id);
+        }
+    }
     res.status(200).json({
         billSearch
     });
