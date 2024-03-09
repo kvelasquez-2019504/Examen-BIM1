@@ -4,10 +4,15 @@ import Product from "../products/product.model.js";
 
 export const shoppingCartGet =async (req=request,res=response)=>{
     const userLog = req.user;
+    let fullPayment=0;
     const [totalCart]=await Promise.all([
         ShoppingCart.find({$and:[{state:true},{idUser:userLog.id}]})
     ]);
+    for(let shoppingCart of totalCart){
+        fullPayment= fullPayment+ shoppingCart.totalPrice;
+    }
     res.status(200).json({
+        pay:fullPayment,
         totalCart
     });  
 }

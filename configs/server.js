@@ -10,6 +10,8 @@ import loginRoutes from '../src/auth/auth.routes.js';
 import productRoutes from '../src/products/product.routes.js';
 import categoryRoutes from '../src/categories/category.routes.js';
 import shoppingCartRoutes from '../src/shoppingCart/shoppingCart.routes.js';
+import billRoutes from '../src/bill/bill.routes.js';
+
 class Server {
     constructor(){
         this.app = express();
@@ -19,6 +21,7 @@ class Server {
         this.productPath= '/marketOnline/v1/products';
         this.categoryPath= '/marketOnline/v1/categories';
         this.shoppingCartPath='/marketOnline/v1/shopping';
+        this.billPath = '/marketOnline/v1/bill'
         this.middlewares();
         this.conectarDB();
         this.routes();
@@ -41,6 +44,7 @@ class Server {
         this.app.use(this.productPath, productRoutes);
         this.app.use(this.categoryPath,categoryRoutes);
         this.app.use(this.shoppingCartPath,shoppingCartRoutes);
+        this.app.use(this.billPath, billRoutes);
     }
 
     listen(){
