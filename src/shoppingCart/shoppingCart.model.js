@@ -5,7 +5,7 @@ const ShoppingCartSchema= Schema({
         type:Schema.Types.ObjectId,
         required:[true,"The user id required"]
     },
-    idProduto:{
+    idProduct:{
         type:Schema.Types.ObjectId,
         required:[true,'The product id required']
     },
@@ -29,4 +29,4 @@ ShoppingCartSchema.method.JSON=function(){
     return shoppingCar;
 }
 
-export default mongoose.model('ShoppingCar',ShoppingCartSchema);
+export default mongoose.model('ShoppingCart',ShoppingCartSchema);
