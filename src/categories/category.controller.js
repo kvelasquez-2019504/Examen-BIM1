@@ -29,11 +29,11 @@ export const categoryDelete =async (req=request,res=response)=>{
         Product.find({category:idCategory})
     ]);
     for(let product of productWithCategory){
-       await Product.findByIdAndUpdate(product._id,{category:"65eb106dcc44286c4fb35f5f"});
+       await Product.findByIdAndUpdate(product._id,{category:"65ebdbbf0eb0d0797410ccc9"});
        const {name,category} = await Product.findById(product._id);
        productsWithCategory.push({name,category});
     }
-    const {name} =await Category.findById('65eb106dcc44286c4fb35f5f');
+    const {name} =await Category.findById('65ebdbbf0eb0d0797410ccc9');
     await Category.findByIdAndUpdate(idCategory,{state:false});
     const categoryDeleted =await Category.findByIdAndUpdate(idCategory);
     res.status(200).json({

@@ -11,10 +11,10 @@ import { productGet,
     productDelete,
     searchName,
     productPost } from "./product.controller.js";
-import { verifyQuantity } from "../helpers/db-validator.js";
+import { existsCategory, verifyQuantity } from "../helpers/db-validator.js";
 import { validateJWT } from "../middlewares/validateJWT.js";
 import { verifyRole } from "../middlewares/validate-role.js";
-import { verifyIdProduct } from "../middlewares/validate-data.js";
+import { verifyIdProduct,existsIdCategory } from "../middlewares/validate-data.js";
 
 const router= Router();
 
@@ -84,7 +84,8 @@ router.post('/',[validateJWT,
     check("stock",'The stock for producto is required').not().isEmpty(),
     check('salesAmount','The sales amount is required').not().isEmpty(),
     check(['cost','stock']).custom(verifyQuantity),
-    //check('category','Category is required with ID in Mongo format').isMongoId(),
+    check('category','Category is required with ID in Mongo format').isMongoId(),
+    existsIdCategory,
     validateFields
 ],productPost);
 

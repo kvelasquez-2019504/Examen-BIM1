@@ -3,12 +3,12 @@ import ShoppingCart from '../shoppingCart/shoppingCart.model.js';
 import Product from '../products/product.model.js';
 import Bill from './bill.model.js';
 
-export const billsGet =async(req=request,res=response)=>{
+export const billsGet = async (req = request, res = response) => {
     const userLog = req.user;
-    const [totalBills] = await Bill.find({state:true,idUser:userLog.id});
-    console.log(totalBills.length);
+    const [totalBills] = await Promise.all([
+        Bill.find({ state: true, idUser: userLog.id })
+    ]);
     res.status(200).json({
-        count:totalBills.length,
         totalBills
     })
 }
@@ -33,9 +33,9 @@ export const payShoppingCart = async (req = request, res = response) => {
             fullPayment += shoppingCart.totalPrice;
             totalItems += shoppingCart.quantityBuy;
             //Agrego los productos a la lista Productos
-            products.push({ idProduct:productSearch._id,product: productSearch.name, quantityBuy: shoppingCart.quantityBuy, totalPrice: shoppingCart.totalPrice });
+            products.push({ idProduct: productSearch._id, product: productSearch.name, quantityBuy: shoppingCart.quantityBuy, totalPrice: shoppingCart.totalPrice });
             //Modifico el stock de producto y la cantidad de ventas le sumo lo comprado
-            await Product.findByIdAndUpdate(shoppingCart.idProduct, { stock: (productSearch.stock - shoppingCart.quantityBuy), salesAmout: (productSearch.salesAmout + shoppingCart.quantityBuy) });
+            await Product.findByIdAndUpdate(shoppingCart.idProduct, { stock: (productSearch.stock - shoppingCart.quantityBuy), salesAmount: (productSearch.salesAmout + shoppingCart.quantityBuy) });
             await ShoppingCart.findByIdAndUpdate(shoppingCart._id, { state: false });
         }
         const bill = new Bill({ idUser: userLog.id, products: products, totalItems: totalItems, fullPayment: fullPayment, pay: pay, turned: (pay - fullPayment) });

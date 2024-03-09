@@ -86,13 +86,14 @@ export const verifyIdProductShopping = async (req, res, next) => {
 export const verifyIdCategory = async (req, res, next) => {
     const { idCategory } = req.params;
     try {
-        if (idCategory != "65eb106dcc44286c4fb35f5f") {
+        if (idCategory != "65ebdbbf0eb0d0797410ccc9") {
             const categorySearch = await Category.findById(idCategory);
             if (!categorySearch) {
                 return res.status(400).json({
                     msg: "The category does not exist in database"
                 });
             }
+
         } else {
             return res.status(400).json({
                 msg: "This category cannot be  or deleted"
@@ -104,22 +105,41 @@ export const verifyIdCategory = async (req, res, next) => {
         return res.status(500).json({
             msg: "Contact administrator"
         });
+
     }
 }
 
 
 export const verifyQuantityBuy = async (req, res, next) => {
-    const { quantityBuy,idProduct } = req.body;
+    const { quantityBuy, idProduct } = req.body;
     if (quantityBuy <= 0) {
-        return res.status(400).json({ 
-            msg: 'The quantity of product to be purchased must be greater than 0' 
+        return res.status(400).json({
+            msg: 'The quantity of product to be purchased must be greater than 0'
         });
     }
     const productSearch = await Product.findById(idProduct);
-    if(productSearch.stock<quantityBuy){
-        return res.status(400).json({ 
-            msg: `The stock of product ${productSearch.name} is ${productSearch.stock}` 
+    if (productSearch.stock < quantityBuy) {
+        return res.status(400).json({
+            msg: `The stock of product ${productSearch.name} is ${productSearch.stock}`
         });
     }
     next();
+}
+
+export const existsIdCategory = async (req, res, next) => {
+    const { category } = req.body;
+    try {
+        const categorySearch = await Category.findById(category);
+        if (!categorySearch) {
+            return res.status(400).json({
+                msg: "The category does not exist in database"
+            });
+        }
+        next();
+    } catch (error) {
+        console.log(error);
+        return res.status(500).json({
+            msg: "Check that the ID is from Mongo. If not, contact the administrator."
+        });
+    }
 }
