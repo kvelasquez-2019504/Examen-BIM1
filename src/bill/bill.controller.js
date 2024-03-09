@@ -24,24 +24,7 @@ export const billGetUser = async(req,res)=>{
 }
 
 export const billPut=async(req,res)=>{
-    const {idBill} =req.params;
-    const{idProduct,newQuantity}=req.body;
-    const billSearch = await Bill.findById(idBill);
-    for(let producto of billSearch.products){
-        console.log(producto.idProduct);
-        const productSearch = await Product.findById(idProduct);
-        if(productSearch.stock<newQuantity){
-            res.status(200).json({
-                msg:"Not enough in stock"
-            });
-        }else{
-            console.log(productSearch.id==idProduct);
-            console.log(productSearch.id);
-        }
-    }
-    res.status(200).json({
-        billSearch
-    });
+    
 }
 
 export const payShoppingCart = async (req = request, res = response) => {

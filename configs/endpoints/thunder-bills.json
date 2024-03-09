@@ -1,0 +1,73 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "bills",
+    "dateExported": "2024-03-09T05:29:21.465Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "f2812539-b0c8-4cdc-9e04-5dc1505bf1da",
+            "colId": "9ce1dc02-02f2-4fd0-ae96-2e5347e54d3a",
+            "containerId": "",
+            "name": "buyShoppingCar",
+            "url": "http://localhost:3000/marketOnline/v1/bill",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-03-09T01:27:20.323Z",
+            "modified": "2024-03-09T04:45:50.852Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWViZDdkOGYxM2ZhMjBmNmQ0MjE5MjQiLCJpYXQiOjE3MDk5NTgxOTgsImV4cCI6MTcwOTk2ODk5OH0.0101s8UYJ33brwzAoJ_b2fpoJ4jN5kHXotKRgnN4ASE"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"pay\":400\n}",
+                "form": []
+            },
+            "reqType": "post",
+            "tests": []
+        },
+        {
+            "_id": "c5a80035-00cc-4230-bbdc-129284b051e7",
+            "colId": "9ce1dc02-02f2-4fd0-ae96-2e5347e54d3a",
+            "containerId": "",
+            "name": "billsGet",
+            "url": "http://localhost:3000/marketOnline/v1/bill",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-03-09T03:06:06.421Z",
+            "modified": "2024-03-09T04:29:10.045Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWViZDdkOGYxM2ZhMjBmNmQ0MjE5MjQiLCJpYXQiOjE3MDk5NTgxOTgsImV4cCI6MTcwOTk2ODk5OH0.0101s8UYJ33brwzAoJ_b2fpoJ4jN5kHXotKRgnN4ASE"
+                }
+            ],
+            "params": [],
+            "reqType": "get",
+            "tests": []
+        },
+        {
+            "_id": "c6b8422a-b707-4988-bd6c-0ab7bd2a8799",
+            "colId": "9ce1dc02-02f2-4fd0-ae96-2e5347e54d3a",
+            "containerId": "",
+            "name": "billsGetByUser",
+            "url": "http://localhost:3000/marketOnline/v1/bill/user/65ebd7d8f13fa20f6d421924",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-03-09T05:14:27.726Z",
+            "modified": "2024-03-09T05:22:52.663Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWViZDdjYmYxM2ZhMjBmNmQ0MjE5MjEiLCJpYXQiOjE3MDk5NTkwODUsImV4cCI6MTcwOTk2OTg4NX0.Em2viF57g6UVhrZM8ziUAHP9Rb8Z9DnhZ2S5CiCFP1c"
+                }
+            ],
+            "params": [],
+            "tests": []
+        }
+    ]
+}
