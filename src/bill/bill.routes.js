@@ -4,9 +4,14 @@ import {validateFields} from '../middlewares/validate-fields.js';
 import { validateJWT } from "../middlewares/validateJWT.js";
 import { verifyRole } from "../middlewares/validate-role.js";
 
-import { payShoppingCart } from "./bill.controller.js";
+import { billsGet,payShoppingCart } from "./bill.controller.js";
 
 const router= Router();
+
+router.get('/',[
+    validateJWT,
+    verifyRole("CLIENT")
+],billsGet);
 
 router.post('/',[
     validateJWT,
