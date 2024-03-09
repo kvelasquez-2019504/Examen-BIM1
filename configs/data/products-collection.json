@@ -1,0 +1,75 @@
+[{
+  "_id": {
+    "$oid": "65ebd889f13fa20f6d42192b"
+  },
+  "name": "Fresa",
+  "description": "Es una fruta muy dulce y jugosa a precio accesible",
+  "cost": 5,
+  "stock": 500,
+  "salesAmount": 0,
+  "category": {
+    "$oid": "65ebde2cee4fff2e94c79b98"
+  },
+  "state": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65ebd8a7f13fa20f6d42192e"
+  },
+  "name": "Piña",
+  "description": "Una fruta tropical que es muy dulce y con jugo",
+  "cost": 7,
+  "stock": 100,
+  "salesAmount": 0,
+  "category": {
+    "$oid": "65ebde2cee4fff2e94c79b98"
+  },
+  "state": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65ebdf71ee4fff2e94c79baa"
+  },
+  "name": "Tenis",
+  "description": "Tenis marca nike",
+  "cost": 159.5,
+  "stock": 80,
+  "salesAmount": 0,
+  "category": {
+    "$oid": "65ebdb370eb0d0797410ccc6"
+  },
+  "state": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65ebe2347a93e9217f3b758f"
+  },
+  "name": "Naruto",
+  "description": "Figura a escala de Naruto Uzumaki",
+  "cost": 950,
+  "stock": 15,
+  "salesAmount": 0,
+  "category": {
+    "$oid": "65ebdb070eb0d0797410ccc3"
+  },
+  "state": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65ebe33a7a93e9217f3b75a2"
+  },
+  "name": "Nada",
+  "description": "Prueba",
+  "cost": 500,
+  "stock": 200,
+  "salesAmount": 0,
+  "category": {
+    "$oid": "65ebdb070eb0d0797410ccc3"
+  },
+  "state": true,
+  "__v": 0
+}]

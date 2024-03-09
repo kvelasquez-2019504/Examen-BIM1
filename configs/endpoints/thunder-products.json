@@ -1,0 +1,179 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "products",
+    "dateExported": "2024-03-09T04:48:00.703Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "d8d06fea-fcf2-422d-a6f3-5e5612dd4de5",
+            "colId": "eb3b9a9b-beda-4fee-a765-845b49759e35",
+            "containerId": "",
+            "name": "productPost",
+            "url": "http://localhost:3000/marketOnline/v1/products",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-03-08T07:35:38.040Z",
+            "modified": "2024-03-09T04:19:06.153Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWViZDdjYmYxM2ZhMjBmNmQ0MjE5MjEiLCJpYXQiOjE3MDk5NTUwNzUsImV4cCI6MTcwOTk2NTg3NX0.kPfOg_Jo7AWbYSIAlQw6W58gTAo4EtTbdeaHpOzW9jY"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\":\"Prueba\",\n  \"description\":\"Nada\",\n  \"cost\":1,\n  \"stock\":1,\n  \"salesAmount\":0,\n  \"category\":\"65ebdbbf0eb0d0797410ccc9\"\n}",
+                "form": []
+            },
+            "reqType": "post",
+            "tests": []
+        },
+        {
+            "_id": "02d4db22-636a-4c3e-8076-bb1e698bd0b7",
+            "colId": "eb3b9a9b-beda-4fee-a765-845b49759e35",
+            "containerId": "",
+            "name": "catalogView",
+            "url": "http://localhost:3000/marketOnline/v1/products",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-03-08T07:49:16.837Z",
+            "modified": "2024-03-09T03:59:19.752Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWViZDdjYmYxM2ZhMjBmNmQ0MjE5MjEiLCJpYXQiOjE3MDk5NTUwNzUsImV4cCI6MTcwOTk2NTg3NX0.kPfOg_Jo7AWbYSIAlQw6W58gTAo4EtTbdeaHpOzW9jY"
+                }
+            ],
+            "params": [],
+            "reqType": "get",
+            "tests": []
+        },
+        {
+            "_id": "127683c8-d2af-49c3-a903-0287d00b3e7f",
+            "colId": "eb3b9a9b-beda-4fee-a765-845b49759e35",
+            "containerId": "",
+            "name": "specificProductUpdate",
+            "url": "http://localhost:3000/marketOnline/v1/products/65ebe33a7a93e9217f3b75a2",
+            "method": "PUT",
+            "sortNum": 20000,
+            "created": "2024-03-08T08:29:55.768Z",
+            "modified": "2024-03-09T04:21:50.907Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWViZDdjYmYxM2ZhMjBmNmQ0MjE5MjEiLCJpYXQiOjE3MDk5NTUwNzUsImV4cCI6MTcwOTk2NTg3NX0.kPfOg_Jo7AWbYSIAlQw6W58gTAo4EtTbdeaHpOzW9jY"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\":\"Raton de juguente\",\n  \"description\":\"Un juguete el cual tiene luces led\",\n  \"cost\":15,\n  \"stock\":25,\n  \"category\":\"65ebdb070eb0d0797410ccc3\"\n}",
+                "form": []
+            },
+            "reqType": "put",
+            "tests": []
+        },
+        {
+            "_id": "b238f58e-a6e8-4493-b99e-88caeff88f37",
+            "colId": "eb3b9a9b-beda-4fee-a765-845b49759e35",
+            "containerId": "",
+            "name": "productDelete",
+            "url": "http://localhost:3000/marketOnline/v1/products/65ebdf71ee4fff2e94c79baa",
+            "method": "DELETE",
+            "sortNum": 25000,
+            "created": "2024-03-08T10:25:31.611Z",
+            "modified": "2024-03-09T04:16:14.511Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWViZDdjYmYxM2ZhMjBmNmQ0MjE5MjEiLCJpYXQiOjE3MDk5NTUwNzUsImV4cCI6MTcwOTk2NTg3NX0.kPfOg_Jo7AWbYSIAlQw6W58gTAo4EtTbdeaHpOzW9jY"
+                }
+            ],
+            "params": [],
+            "reqType": "get",
+            "tests": []
+        },
+        {
+            "_id": "451a9075-ef87-4058-bb7c-a86442468482",
+            "colId": "eb3b9a9b-beda-4fee-a765-845b49759e35",
+            "containerId": "",
+            "name": "productGetById",
+            "url": "http://localhost:3000/marketOnline/v1/products/65ebdf71ee4fff2e94c79baa",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-03-08T07:49:39.828Z",
+            "modified": "2024-03-09T04:22:16.546Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWViZDdjYmYxM2ZhMjBmNmQ0MjE5MjEiLCJpYXQiOjE3MDk5NTUwNzUsImV4cCI6MTcwOTk2NTg3NX0.kPfOg_Jo7AWbYSIAlQw6W58gTAo4EtTbdeaHpOzW9jY"
+                }
+            ],
+            "params": [],
+            "reqType": "get",
+            "tests": []
+        },
+        {
+            "_id": "640292fa-f51c-4127-b38e-78741ab490cc",
+            "colId": "eb3b9a9b-beda-4fee-a765-845b49759e35",
+            "containerId": "",
+            "name": "controlProducts",
+            "url": "http://localhost:3000/marketOnline/v1/products/control/list",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-03-08T08:55:44.788Z",
+            "modified": "2024-03-09T04:01:25.638Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWViZDdjYmYxM2ZhMjBmNmQ0MjE5MjEiLCJpYXQiOjE3MDk5NTUwNzUsImV4cCI6MTcwOTk2NTg3NX0.kPfOg_Jo7AWbYSIAlQw6W58gTAo4EtTbdeaHpOzW9jY"
+                }
+            ],
+            "params": [],
+            "reqType": "get",
+            "tests": []
+        },
+        {
+            "_id": "97e06573-ff1e-4eac-89dd-0e432ef72209",
+            "colId": "eb3b9a9b-beda-4fee-a765-845b49759e35",
+            "containerId": "",
+            "name": "productsBestSellers",
+            "url": "http://localhost:3000/marketOnline/v1/products/control/bestSellers",
+            "method": "GET",
+            "sortNum": 35000,
+            "created": "2024-03-08T09:40:37.764Z",
+            "modified": "2024-03-09T04:22:40.675Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWViZDdjYmYxM2ZhMjBmNmQ0MjE5MjEiLCJpYXQiOjE3MDk5NTUwNzUsImV4cCI6MTcwOTk2NTg3NX0.kPfOg_Jo7AWbYSIAlQw6W58gTAo4EtTbdeaHpOzW9jY"
+                }
+            ],
+            "params": [],
+            "reqType": "get",
+            "tests": []
+        },
+        {
+            "_id": "675cd204-47e4-4df2-9432-d8c802411c5a",
+            "colId": "eb3b9a9b-beda-4fee-a765-845b49759e35",
+            "containerId": "",
+            "name": "controlOutOfStock",
+            "url": "http://localhost:3000/marketOnline/v1/products/control/outOfStock",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2024-03-08T09:31:06.309Z",
+            "modified": "2024-03-09T04:17:46.350Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWViZDdjYmYxM2ZhMjBmNmQ0MjE5MjEiLCJpYXQiOjE3MDk5NTUwNzUsImV4cCI6MTcwOTk2NTg3NX0.kPfOg_Jo7AWbYSIAlQw6W58gTAo4EtTbdeaHpOzW9jY"
+                }
+            ],
+            "params": [],
+            "reqType": "get",
+            "tests": []
+        }
+    ]
+}

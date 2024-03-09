@@ -1,0 +1,45 @@
+[{
+  "_id": {
+    "$oid": "65ebdb070eb0d0797410ccc3"
+  },
+  "name": "Artesania",
+  "description": "Aqui puedes encontrar diferentes creaciones de las personas",
+  "state": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65ebdb370eb0d0797410ccc6"
+  },
+  "name": "Ropa",
+  "description": "Aqui puedes encontrar diferentes tipos de vestimenta",
+  "state": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65ebdbbf0eb0d0797410ccc9"
+  },
+  "name": "Deleted",
+  "description": "Encontraras los productos con categoria eliminada",
+  "state": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65ebdbd00eb0d0797410cccc"
+  },
+  "name": "Comida",
+  "description": "Son productos destinados a saciar el hambre",
+  "state": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65ebde2cee4fff2e94c79b98"
+  },
+  "name": "Fruta",
+  "description": "Son productos que estan destinados a distintos gustos",
+  "state": true,
+  "__v": 0
+}]

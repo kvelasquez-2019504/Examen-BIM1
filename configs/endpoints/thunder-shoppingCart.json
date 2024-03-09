@@ -1,0 +1,54 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "shoppingCart",
+    "dateExported": "2024-03-09T04:48:43.865Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "bd4bc2be-8bfc-4896-9c75-6a3b0cbeff29",
+            "colId": "90b7a2ce-872f-494e-b21c-07860594b812",
+            "containerId": "",
+            "name": "shoppingCartPost",
+            "url": "http://localhost:3000/marketOnline/v1/shopping",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-03-09T00:02:30.823Z",
+            "modified": "2024-03-09T04:27:32.920Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWViZDdkOGYxM2ZhMjBmNmQ0MjE5MjQiLCJpYXQiOjE3MDk5NTgxOTgsImV4cCI6MTcwOTk2ODk5OH0.0101s8UYJ33brwzAoJ_b2fpoJ4jN5kHXotKRgnN4ASE"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"idProduct\":\"65ebdf71ee4fff2e94c79baa\",\n  \"quantityBuy\":1\n}",
+                "form": []
+            },
+            "reqType": "post",
+            "tests": []
+        },
+        {
+            "_id": "5817ae74-9a53-4ca4-9245-05c584d01b02",
+            "colId": "90b7a2ce-872f-494e-b21c-07860594b812",
+            "containerId": "",
+            "name": "myShoppingCart",
+            "url": "http://localhost:3000/marketOnline/v1/shopping",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-03-09T00:56:15.668Z",
+            "modified": "2024-03-09T04:27:06.012Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWViZDdkOGYxM2ZhMjBmNmQ0MjE5MjQiLCJpYXQiOjE3MDk5NTgxOTgsImV4cCI6MTcwOTk2ODk5OH0.0101s8UYJ33brwzAoJ_b2fpoJ4jN5kHXotKRgnN4ASE"
+                }
+            ],
+            "params": [],
+            "reqType": "get",
+            "tests": []
+        }
+    ]
+}

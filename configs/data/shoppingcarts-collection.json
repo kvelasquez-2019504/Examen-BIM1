@@ -1,0 +1,45 @@
+[{
+  "_id": {
+    "$oid": "65ebe5109f4703dbd4bb9580"
+  },
+  "idUser": {
+    "$oid": "65ebd7d8f13fa20f6d421924"
+  },
+  "idProduct": {
+    "$oid": "65ebd889f13fa20f6d42192b"
+  },
+  "quantityBuy": 5,
+  "totalPrice": 25,
+  "state": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65ebe5349f4703dbd4bb9588"
+  },
+  "idUser": {
+    "$oid": "65ebd7d8f13fa20f6d421924"
+  },
+  "idProduct": {
+    "$oid": "65ebdf71ee4fff2e94c79baa"
+  },
+  "quantityBuy": 1,
+  "totalPrice": 159.5,
+  "state": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65ebe5819f4703dbd4bb959a"
+  },
+  "idUser": {
+    "$oid": "65ebd7d8f13fa20f6d421924"
+  },
+  "idProduct": {
+    "$oid": "65ebdf71ee4fff2e94c79baa"
+  },
+  "quantityBuy": 1,
+  "totalPrice": 159.5,
+  "state": false,
+  "__v": 0
+}]

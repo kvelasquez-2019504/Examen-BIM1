@@ -1,0 +1,36 @@
+[{
+  "_id": {
+    "$oid": "65ebd7cbf13fa20f6d421921"
+  },
+  "username": "kvelasquez",
+  "name": "Kenneth Velasquez",
+  "age": 18,
+  "password": "$2a$10$W3DRlJCpyY4WYer5erh9GOG4qWn6sqM67HDrWgIRScffvyqUm3cA2",
+  "role": "ADMIN",
+  "state": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65ebd7d8f13fa20f6d421924"
+  },
+  "username": "nadie",
+  "name": "Jhony Da trebo",
+  "age": 18,
+  "password": "$2a$10$IkHvCie0iK/D7MJSAuC28.n5jgRJ7PRNBoCYd9W/AVBW0lHEoe3vq",
+  "role": "CLIENT",
+  "state": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65ebd7eaf13fa20f6d421927"
+  },
+  "username": "scardenas",
+  "name": "Stephan Cardenas",
+  "age": 18,
+  "password": "$2a$10$7Z1HizXGMFi5HveWVoodRen5UAEKUV6x5jb7F6xO/Fk.ZNeHYmEeW",
+  "role": "CLIENT",
+  "state": true,
+  "__v": 0
+}]

@@ -13,6 +13,15 @@ export const billsGet = async (req = request, res = response) => {
     })
 }
 
+export const billPut=async(req,res)=>{
+    const {idBill} =req.params;
+    const billSearch = await Bill.findById(idBill);
+    
+    res.status(200).json({
+        billSearch
+    });
+}
+
 export const payShoppingCart = async (req = request, res = response) => {
     const userLog = req.user;
     const { pay } = req.body;
@@ -35,7 +44,7 @@ export const payShoppingCart = async (req = request, res = response) => {
             //Agrego los productos a la lista Productos
             products.push({ idProduct: productSearch._id, product: productSearch.name, quantityBuy: shoppingCart.quantityBuy, totalPrice: shoppingCart.totalPrice });
             //Modifico el stock de producto y la cantidad de ventas le sumo lo comprado
-            await Product.findByIdAndUpdate(shoppingCart.idProduct, { stock: (productSearch.stock - shoppingCart.quantityBuy), salesAmount: (productSearch.salesAmout + shoppingCart.quantityBuy) });
+            await Product.findByIdAndUpdate(shoppingCart.idProduct, { stock: (productSearch.stock - shoppingCart.quantityBuy), salesAmount: (productSearch.salesAmount + shoppingCart.quantityBuy) });
             await ShoppingCart.findByIdAndUpdate(shoppingCart._id, { state: false });
         }
         const bill = new Bill({ idUser: userLog.id, products: products, totalItems: totalItems, fullPayment: fullPayment, pay: pay, turned: (pay - fullPayment) });

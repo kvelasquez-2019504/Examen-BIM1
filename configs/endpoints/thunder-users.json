@@ -1,0 +1,98 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "users",
+    "dateExported": "2024-03-09T04:47:43.290Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "5f738acd-3e3e-44e7-9781-36fb983e2eab",
+            "colId": "00ada902-ee1d-44bd-97c1-af565d002e77",
+            "containerId": "",
+            "name": "userPost",
+            "url": "http://localhost:3000/marketOnline/v1/users",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-03-04T17:40:41.397Z",
+            "modified": "2024-03-09T03:30:50.707Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"username\":\"scardenas\",\n  \"name\":\"Stephan Cardenas\",\n  \"age\":18,\n  \"password\":\"123456\"\n}",
+                "form": []
+            },
+            "reqType": "post",
+            "tests": []
+        },
+        {
+            "_id": "9e8f1cbc-a256-4523-ae04-d62f9a0b8b5d",
+            "colId": "00ada902-ee1d-44bd-97c1-af565d002e77",
+            "containerId": "",
+            "name": "login",
+            "url": "http://localhost:3000/marketOnline/v1/login",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-03-08T02:24:51.266Z",
+            "modified": "2024-03-09T04:38:05.117Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"username\":\"kvelasquez\",\n  \"password\":\"123456\"\n}",
+                "form": []
+            },
+            "reqType": "post",
+            "tests": []
+        },
+        {
+            "_id": "5c0be10f-3e02-4aa3-9f42-ebdb879339bc",
+            "colId": "00ada902-ee1d-44bd-97c1-af565d002e77",
+            "containerId": "",
+            "name": "userPut",
+            "url": "http://localhost:3000/marketOnline/v1/users",
+            "method": "PUT",
+            "sortNum": 30000,
+            "created": "2024-03-08T02:36:41.680Z",
+            "modified": "2024-03-09T04:24:42.246Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWViZDdkOGYxM2ZhMjBmNmQ0MjE5MjQiLCJpYXQiOjE3MDk5NTgxOTgsImV4cCI6MTcwOTk2ODk5OH0.0101s8UYJ33brwzAoJ_b2fpoJ4jN5kHXotKRgnN4ASE"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"username\":\"nadie\",\n  \"name\":\"Jhony Da trebo\",\n  \"age\":18,\n  \"password\":\"123456\",\n  \"role\":\"ADMIN\"\n}",
+                "form": []
+            },
+            "reqType": "put",
+            "tests": []
+        },
+        {
+            "_id": "09a26ea6-7413-4253-8899-d48c0d5f06ec",
+            "colId": "00ada902-ee1d-44bd-97c1-af565d002e77",
+            "containerId": "",
+            "name": "userDelete",
+            "url": "http://localhost:3000/marketOnline/v1/users",
+            "method": "DELETE",
+            "sortNum": 40000,
+            "created": "2024-03-08T05:36:30.524Z",
+            "modified": "2024-03-08T06:29:07.111Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWVhNWJlMzZlNmM1NDVmNjFmYjMxODkiLCJpYXQiOjE3MDk4Nzg4ODEsImV4cCI6MTcwOTg4OTY4MX0.Eu0Pu_OVN2lfeYSKoH8CyXjG5-0rMaKaM0XWyoZLj20"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"password\":\"123456\",\n  \"passwordConfirm\":\"123456\"\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}

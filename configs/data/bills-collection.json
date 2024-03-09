@@ -1,0 +1,43 @@
+[{
+  "_id": {
+    "$oid": "65ebe981fa29db37d0f18e7f"
+  },
+  "idUser": {
+    "$oid": "65ebd7d8f13fa20f6d421924"
+  },
+  "products": [
+    {
+      "idProduct": {
+        "$oid": "65ebd889f13fa20f6d42192b"
+      },
+      "product": "Fresa",
+      "quantityBuy": 5,
+      "totalPrice": 25
+    },
+    {
+      "idProduct": {
+        "$oid": "65ebdf71ee4fff2e94c79baa"
+      },
+      "product": "Tenis",
+      "quantityBuy": 1,
+      "totalPrice": 159.5
+    },
+    {
+      "idProduct": {
+        "$oid": "65ebdf71ee4fff2e94c79baa"
+      },
+      "product": "Tenis",
+      "quantityBuy": 1,
+      "totalPrice": 159.5
+    }
+  ],
+  "totalItems": 7,
+  "fullPayment": 344,
+  "pay": 400,
+  "turned": 56,
+  "state": true,
+  "created_at": {
+    "$date": "2024-03-09T04:45:53.780Z"
+  },
+  "__v": 0
+}]

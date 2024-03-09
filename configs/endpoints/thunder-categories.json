@@ -1,0 +1,99 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "categories",
+    "dateExported": "2024-03-09T04:48:11.684Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "9416dd11-0717-49c3-bc81-91b806b204bb",
+            "colId": "48333d62-e83e-471c-b6b4-72d83da958e2",
+            "containerId": "",
+            "name": "categoryPost",
+            "url": "http://localhost:3000/marketOnline/v1/categories",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-03-08T13:09:02.436Z",
+            "modified": "2024-03-09T03:57:32.690Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWViZDdjYmYxM2ZhMjBmNmQ0MjE5MjEiLCJpYXQiOjE3MDk5NTUwNzUsImV4cCI6MTcwOTk2NTg3NX0.kPfOg_Jo7AWbYSIAlQw6W58gTAo4EtTbdeaHpOzW9jY"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\":\"Fruta\",\n  \"description\":\"Son productos que estan destinados a distintos gustos\"\n}",
+                "form": []
+            },
+            "reqType": "post",
+            "tests": []
+        },
+        {
+            "_id": "5a22611c-be58-4a65-b582-74a98f2650a2",
+            "colId": "48333d62-e83e-471c-b6b4-72d83da958e2",
+            "containerId": "",
+            "name": "categoryGet",
+            "url": "http://localhost:3000/marketOnline/v1/categories",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-03-08T13:23:24.745Z",
+            "modified": "2024-03-09T03:49:54.170Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWViZDdjYmYxM2ZhMjBmNmQ0MjE5MjEiLCJpYXQiOjE3MDk5NTUwNzUsImV4cCI6MTcwOTk2NTg3NX0.kPfOg_Jo7AWbYSIAlQw6W58gTAo4EtTbdeaHpOzW9jY"
+                }
+            ],
+            "params": [],
+            "reqType": "get",
+            "tests": []
+        },
+        {
+            "_id": "cfad2782-5986-41c4-a7b7-51101036cf25",
+            "colId": "48333d62-e83e-471c-b6b4-72d83da958e2",
+            "containerId": "",
+            "name": "categoryPut",
+            "url": "http://localhost:3000/marketOnline/v1/categories/65ebdbbf0eb0d0797410ccc9",
+            "method": "PUT",
+            "sortNum": 30000,
+            "created": "2024-03-08T13:33:53.458Z",
+            "modified": "2024-03-09T03:54:31.485Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWViZDdjYmYxM2ZhMjBmNmQ0MjE5MjEiLCJpYXQiOjE3MDk5NTUwNzUsImV4cCI6MTcwOTk2NTg3NX0.kPfOg_Jo7AWbYSIAlQw6W58gTAo4EtTbdeaHpOzW9jY"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\":\"Deporte\",\n  \"description\":\"Son los productos destinados a los aficionados de los deportes\"\n}",
+                "form": []
+            },
+            "reqType": "put",
+            "tests": []
+        },
+        {
+            "_id": "964f1b2a-6b64-409a-8386-3ddc321a124f",
+            "colId": "48333d62-e83e-471c-b6b4-72d83da958e2",
+            "containerId": "",
+            "name": "categoryDelete",
+            "url": "http://localhost:3000/marketOnline/v1/categories/65ebdbbf0eb0d0797410ccc9",
+            "method": "DELETE",
+            "sortNum": 40000,
+            "created": "2024-03-08T14:03:05.960Z",
+            "modified": "2024-03-09T03:53:23.808Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWViZDdjYmYxM2ZhMjBmNmQ0MjE5MjEiLCJpYXQiOjE3MDk5NTUwNzUsImV4cCI6MTcwOTk2NTg3NX0.kPfOg_Jo7AWbYSIAlQw6W58gTAo4EtTbdeaHpOzW9jY"
+                }
+            ],
+            "params": [],
+            "reqType": "del",
+            "tests": []
+        }
+    ]
+}
